@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import About from "@/components/modules/About";
 import Banner from "@/components/modules/Banner";
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 }

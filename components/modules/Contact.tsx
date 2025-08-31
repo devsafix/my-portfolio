@@ -37,7 +37,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="max-w-7xl mx-auto px-4">
-      <div className="bg-card border border-border rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all">
+      <div className="bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl hover:shadow-2xl transition-all">
         {/* Header */}
         <SectionHeader
           title="Contact With Me"
