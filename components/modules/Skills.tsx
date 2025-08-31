@@ -14,7 +14,7 @@ export default function Skills() {
         />
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, idx) => (
             <SkillCard
               key={idx}
@@ -33,9 +33,7 @@ export default function Skills() {
 function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
   return (
     <div
-      className={`group p-8 bg-gradient-to-br rounded-2xl border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
-        isFullWidth ? "lg:col-span-2 xl:col-span-3" : ""
-      }`}
+      className={`group p-8 bg-gradient-to-br rounded-2xl border border-border`}
     >
       {/* Category Header */}
       <div className="flex items-center justify-center mb-3">
@@ -49,13 +47,7 @@ function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
       </h4>
 
       {/* Skills Grid */}
-      <div
-        className={`grid gap-3 ${
-          isFullWidth
-            ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
-            : "grid-cols-1 sm:grid-cols-2"
-        }`}
-      >
+      <div className={`grid grid-cols-2 gap-3`}>
         {list.map((skill: any, index: any) => (
           <div
             key={index}
@@ -114,19 +106,5 @@ const skillCategories = [
     ],
     icon: Database,
     fullWidth: false,
-  },
-
-  {
-    title: "Professional Skills",
-    list: [
-      "Problem Solving",
-      "System Design",
-      "Code Review",
-      "Project Management",
-      "Continuous Learning",
-      "Mentoring",
-    ],
-    icon: Users,
-    fullWidth: true,
   },
 ];

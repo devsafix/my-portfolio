@@ -6,6 +6,7 @@ import Contact from "@/components/modules/Contact";
 // import EduAndExperience from "@/components/modules/EduAndExperience";
 import Projects from "@/components/modules/Projects";
 import Skills from "@/components/modules/Skills";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
+      <Toaster />
     </div>
   );
 }

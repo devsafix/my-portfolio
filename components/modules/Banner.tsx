@@ -1,5 +1,12 @@
 import React from "react";
-import { Download, Github, Facebook, Instagram, Mail } from "lucide-react";
+import {
+  Download,
+  Github,
+  Facebook,
+  Instagram,
+  Mail,
+  Phone,
+} from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,12 +75,12 @@ export default function Banner() {
                   );
                 })}
                 <Link
-                  href={`mailto:${personalInfo.email}`}
+                  href={"https://wa.me/8801709190412"}
                   target="_blank"
                   className="p-2 rounded-lg border border-border hover:bg-accent transition-colors"
                   aria-label="Email"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                 </Link>
               </div>
             </div>

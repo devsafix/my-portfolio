@@ -1,34 +1,64 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { Button } from "../ui/button";
 import SectionHeader from "../SectionHeader";
+import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 // Contact information data - make this dynamic later
 const contactInfo = {
   office: {
-    title: "Our Office:",
-    address: "Jurain, Dhaka Bangladesh",
+    title: "Hometown:",
+    address: "Tangail, Dhaka Bangladesh",
+  },
+  email: {
+    title: "Email Account:",
+    address: "devsafix@gmail.com",
   },
   phone: {
     title: "Contact Number:",
-    number: "+1234321321",
-  },
-  email: {
-    title: "Email Us:",
-    address: "websitename@mail.com",
+    number: "+8801709190412",
   },
 };
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const form = useRef<HTMLFormElement | null>(null);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
     try {
       setIsSubmitting(true);
+      if (!form.current) {
+        toast.error("Form reference is not available.");
+        return;
+      }
+
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_KEY as string,
+          process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_KEY as string,
+          form.current,
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
+          }
+        )
+        .then(
+          () => {
+            toast.success("Your message has been sent.");
+            e.target.reset();
+            setIsSubmitting(false);
+          },
+          (error: any) => {
+            toast.error("FAIL....");
+            console.log(error);
+          }
+        );
     } catch (error: any) {
       setIsSubmitting(false);
       console.log(error);
@@ -41,7 +71,7 @@ export default function Contact() {
         {/* Header */}
         <SectionHeader
           title="Contact With Me"
-          subtitle="Check out some of my design projects, meticulously crafted with love and dedication, each one reflecting the passion and soul I poured into every detail."
+          subtitle="Get in touch if you would like to work together. Thanks for stopping by."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -62,21 +92,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Phone Number */}
-            <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-white font-medium mb-1">
-                  {contactInfo.phone.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {contactInfo.phone.number}
-                </p>
-              </div>
-            </div>
-
             {/* Email Address */}
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
@@ -92,16 +107,17 @@ export default function Contact() {
               </div>
             </div>
 
+            {/* Phone Number */}
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
-                <Mail className="w-5 h-5" />
+                <Phone className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="text-white font-medium mb-1">
-                  {contactInfo.email.title}
+                  {contactInfo.phone.title}
                 </h3>
                 <p className="text-muted-foreground">
-                  {contactInfo.email.address}
+                  {contactInfo.phone.number}
                 </p>
               </div>
             </div>
@@ -111,6 +127,7 @@ export default function Contact() {
           <div>
             <form
               onSubmit={handleSubmit}
+              ref={form}
               className="space-y-6 border border-border rounded-2xl p-10"
             >
               {/* Full Name and Email Row */}
@@ -125,7 +142,7 @@ export default function Contact() {
                   <input
                     type="text"
                     id="fullName"
-                    name="fullName"
+                    name="from_name"
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                     placeholder="Enter your full name"
@@ -142,7 +159,7 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="from_email"
                     required
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                     placeholder="Enter your email"
@@ -172,11 +189,11 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center gap-2 px-8 py-3 font-medium rounded-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
+                className="inline-flex items-center gap-2 px-8 py-3 font-medium rounded-lg cursor-pointer disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    <div className="w-4 h-4 border-2 border-black border-t-white rounded-full animate-spin"></div>
                     Sending...
                   </>
                 ) : (

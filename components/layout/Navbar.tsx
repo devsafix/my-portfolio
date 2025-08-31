@@ -87,7 +87,9 @@ export const Navbar = () => {
             {/* Desktop Action Buttons */}
             <div className="hidden lg:flex lg:w-fit lg:gap-6">
               <Button asChild size="sm">
-                <Link href="#">Contact Now</Link>
+                <Link target="_blank" href={"https://wa.me/8801709190412"}>
+                  Message Now
+                </Link>
               </Button>
             </div>
           </div>

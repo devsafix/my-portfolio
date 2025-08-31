@@ -17,12 +17,9 @@ export default function About() {
           <div className="lg:col-span-2 space-y-6">
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                As a{" "}
-                <span className="font-semibold text-primary">
-                  passionate and growth-oriented full-stack developer
-                </span>
-                , I specialize in building dynamic, scalable web applications
-                using modern JavaScript technologies. Currently enrolled in the
+                As a passionate and growth-oriented full-stack developer , I
+                specialize in building dynamic, scalable web applications using
+                modern JavaScript technologies. Currently enrolled in the
                 &quot;Next Level Full Stack&quot; course, I&apos;m sharpening my
                 skills with a strong emphasis on{" "}
                 <span className="font-semibold text-foreground/80">
@@ -43,24 +40,21 @@ export default function About() {
 
               <p className="leading-relaxed text-muted-foreground mt-5">
                 I love blending technology with intelligence. While I have
-                hands-on experience building robust{" "}
-                <strong className="text-foreground/80">
-                  RESTful applications using Node.js, Express, and MongoDB
-                </strong>
-                , I&apos;m now diving deeper into PostgreSQL, GraphQL, and
-                cloud-native architectures. I&apos;m also actively learning Data
-                Structures & Algorithms (DSA) with Java to strengthen my
-                problem-solving foundation.
+                hands-on experience building robust RESTful applications using
+                Node.js, Express, and MongoDB , I&apos;m now diving deeper into
+                PostgreSQL, GraphQL, and cloud-native architectures. I&apos;m
+                also actively learning Data Structures & Algorithms (DSA) with
+                Java to strengthen my problem-solving foundation.
               </p>
 
               <p className="leading-relaxed text-muted-foreground mt-5">
-                <strong className="text-foreground/80">My goal</strong> is to
-                become an expert backend engineer with deep knowledge in DevOps,
-                cloud platforms, and AI-driven workflows delivering fast,
-                scalable, and secure solutions. Whether it&apos;s setting up
-                CI/CD pipelines, managing containerized deployments, or
-                automating processes with AI and no-code tools, I thrive in
-                environments where I can blend performance with intelligence.
+                My goal is to become an expert backend engineer with deep
+                knowledge in DevOps, cloud platforms, and AI-driven workflows
+                delivering fast, scalable, and secure solutions. Whether
+                it&apos;s setting up CI/CD pipelines, managing containerized
+                deployments, or automating processes with AI and no-code tools,
+                I thrive in environments where I can blend performance with
+                intelligence.
               </p>
             </div>
           </div>
