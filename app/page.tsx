@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import Banner from "@/components/modules/Banner";
+import Projects from "@/components/modules/Projects";
 import Skills from "@/components/modules/Skills";
 
 export default function Home() {
@@ -7,7 +8,8 @@ export default function Home() {
     <div>
       <Navbar />
       <Banner />
-      <Skills/>
+      <Projects />
+      <Skills />
     </div>
   );
 }

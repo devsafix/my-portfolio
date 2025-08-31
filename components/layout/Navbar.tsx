@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { name: "Features", href: "#" },
   { name: "Solution", href: "#" },
-  { name: "Pricing", href: "#" },
+  { name: "Skills", href: "#skills" },
   { name: "About", href: "#" },
 ];
 
@@ -31,9 +31,9 @@ export const Navbar = () => {
       >
         <div
           className={cn(
-            "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300",
+            "mx-auto mt-2 max-w-7xl px-6 transition-all duration-300",
             isScrolled &&
-              "bg-background/70 max-w-4xl rounded-2xl border backdrop-blur-xl lg:px-5"
+              "bg-background/40 max-w-5xl rounded-2xl border backdrop-blur-xl lg:px-5"
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-5 lg:gap-0 lg:py-4">

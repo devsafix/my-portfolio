@@ -1,18 +1,16 @@
+import SectionHeader from "../SectionHeader";
+
 export default function Skills() {
   return (
-    <section className="max-w-6xl mx-auto px-4">
+    <section id="skills" className="max-w-7xl mx-auto px-4">
       <div className="bg-card border border-border rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all">
         {/* Header Section */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Skills I Have
-          </h1>
-          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
-            A comprehensive set of tools and technologies I use to build
-            scalable, efficient, and user-friendly applications.
-          </p>
-        </div>
 
+        <SectionHeader
+          title="Skills I Have"
+          subtitle="A comprehensive set of tools and technologies I use to build
+            scalable, efficient, and user-friendly applications."
+        />
         {/* Frontend & Backend Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
           {[
@@ -51,7 +49,7 @@ function SkillCard({
 }) {
   return (
     <div
-      className={`p-6 bg-muted/60 rounded-2xl border border-border  hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${
+      className={`p-6 bg-muted/20 rounded-2xl border border-border  hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${
         fullWidth ? "w-full mt-4" : ""
       }`}
     >

@@ -10,7 +10,7 @@ const personalInfo = {
   title: "Full-Stack Developer (MERN) | Backend Enthusiast",
   description:
     "A highly driven full-stack developer with expertise in building scalable web applications, backend systems, and cloud-based solutions. Passionate about integrating AI automation and modern DevOps practices to deliver high-performance digital products.",
-  availability: "Open To Work",
+  availability: "Available To Work",
   email: "devsafix@gmail.com",
   phone: "+8801709190412",
   photo: "https://i.ibb.co.com/7xsYZ7HQ/devsafix.png",
@@ -25,7 +25,7 @@ export default function Banner() {
   return (
     <div className="pt-10 md:pt-16">
       <div className="bg-background text-foreground">
-        <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {/* Left Profile (1/3) */}
             <div className="bg-card border border-border rounded-3xl p-8 text-center shadow-xl flex flex-col justify-between">
@@ -37,6 +37,7 @@ export default function Banner() {
                     width={200}
                     src={personalInfo.photo}
                     alt="its me"
+                    loading="lazy"
                   />
                 </div>
 
@@ -92,13 +93,13 @@ export default function Banner() {
               </p>
 
               <div className="flex items-center mb-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                <span className="text-sm text-muted-foreground">
+                <div className="w-3 h-3 bg-green-500 animate-pulse rounded-full mr-3"></div>
+                <span className="text- text-muted-foreground">
                   {personalInfo.availability}
                 </span>
               </div>
 
-              <Button className="cursor-pointer flex items-center gap-2">
+              <Button className="cursor-pointer w-[150px] rounded-xl py-5 flex items-center gap-2">
                 <Download className="w-4 h-4" />
                 <span>Download CV</span>
               </Button>
