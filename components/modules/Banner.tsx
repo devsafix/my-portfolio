@@ -25,7 +25,7 @@ export default function Banner() {
   return (
     <div className="pt-10 md:pt-16">
       <div className="bg-background text-foreground">
-        <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {/* Left Profile (1/3) */}
             <div className="bg-card border border-border rounded-3xl p-8 text-center shadow-xl flex flex-col justify-between">
@@ -79,7 +79,7 @@ export default function Banner() {
             </div>
 
             {/* Right Content (2/3) */}
-            <div className="lg:col-span-2 bg-card border border-border rounded-3xl p-10 shadow-xl flex flex-col justify-center">
+            <div className="lg:col-span-2 bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl flex flex-col justify-center">
               <p className="text-muted-foreground text-base mb-4">
                 {personalInfo.greeting}
               </p>
