@@ -57,10 +57,12 @@ function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
         }`}
       >
         {list.map((skill: any, index: any) => (
-          <div key={index} className="group/skill relative overflow-hidden">
-            <div className="h-12 px-4 flex items-center justify-center bg-background/80 backdrop-blur-sm text-foreground rounded-lg text-sm font-medium shadow-sm hover:shadow-md hover:bg-background/90 transition-all duration-200 border border-border/50">
+          <div
+            key={index}
+            className="group/skill relative overflow-hidden cursor-pointer"
+          >
+            <div className="h-12 px-4 flex items-center justify-center bg-background/50 backdrop-blur-sm text-foreground rounded-lg text-sm font-medium shadow-sm hover:shadow-md hover:bg-background/90 transition-all duration-200 border border-border/50">
               <span className="relative z-10">{skill}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
         ))}

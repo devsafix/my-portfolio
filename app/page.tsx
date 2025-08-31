@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
+import About from "@/components/modules/About";
 import Banner from "@/components/modules/Banner";
 import Contact from "@/components/modules/Contact";
 // import EduAndExperience from "@/components/modules/EduAndExperience";
@@ -10,6 +11,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Banner />
+      <About />
       {/* <EduAndExperience /> */}
       <Skills />
       <Projects />

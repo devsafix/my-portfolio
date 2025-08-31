@@ -49,8 +49,8 @@ export default function Contact() {
           <div className="space-y-8 border border-border rounded-2xl p-10">
             {/* Office Address */}
             <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-orange-500/20 rounded-full">
-                <MapPin className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
+                <MapPin className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="text-white font-medium mb-1">
@@ -64,8 +64,8 @@ export default function Contact() {
 
             {/* Phone Number */}
             <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-orange-500/20 rounded-full">
-                <Phone className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
+                <Phone className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="text-white font-medium mb-1">
@@ -79,8 +79,8 @@ export default function Contact() {
 
             {/* Email Address */}
             <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-orange-500/20 rounded-full">
-                <Mail className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
+                <Mail className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="text-white font-medium mb-1">
@@ -93,8 +93,8 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="flex items-center justify-center w-12 h-12 bg-orange-500/20 rounded-full">
-                <Mail className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
+                <Mail className="w-5 h-5" />
               </div>
               <div>
                 <h3 className="text-white font-medium mb-1">
