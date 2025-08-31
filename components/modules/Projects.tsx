@@ -97,7 +97,7 @@ export default function Projects() {
       : projectsData.filter((project) => project.category === activeTab);
 
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-4 pb-16">
+    <section id="projects" className="max-w-7xl mx-auto px-4 py-16">
       <div className="bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl hover:shadow-2xl transition-all">
         {/* Header Section */}
         <SectionHeader
