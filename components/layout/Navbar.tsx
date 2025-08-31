@@ -27,23 +27,22 @@ export const Navbar = () => {
     <header>
       <nav
         data-state={menuState && "active"}
-        className="fixed z-20 w-full px-2"
+        className="fixed z-20 w-full px-4"
       >
         <div
           className={cn(
             "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300",
             isScrolled &&
-              "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
+              "bg-background/70 max-w-4xl rounded-2xl border backdrop-blur-xl lg:px-5"
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+          <div className="relative flex flex-wrap items-center justify-between gap-6 py-5 lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
                 href="/"
                 aria-label="home"
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2 font-bold tracking-wider"
               >
-                {/* <Logo /> */}
                 KAWSER
               </Link>
 
@@ -58,7 +57,7 @@ export const Navbar = () => {
             </div>
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
-              <ul className="flex gap-8 text-sm">
+              <ul className="flex gap-8">
                 {menuItems.map((item, index) => (
                   <li key={index}>
                     <Link
