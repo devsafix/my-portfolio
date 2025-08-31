@@ -21,7 +21,6 @@ export default function Skills() {
               title={category.title}
               list={category.list}
               icon={category.icon}
-              color={category.color}
               isFullWidth={category.fullWidth}
             />
           ))}
@@ -31,10 +30,10 @@ export default function Skills() {
   );
 }
 
-function SkillCard({ title, list, icon: Icon, color, isFullWidth = false }) {
+function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
   return (
     <div
-      className={`group p-8 bg-gradient-to-br ${color} rounded-2xl border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
+      className={`group p-8 bg-gradient-to-br rounded-2xl border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
         isFullWidth ? "lg:col-span-2 xl:col-span-3" : ""
       }`}
     >
@@ -84,7 +83,6 @@ const skillCategories = [
       "TanStack Query",
     ],
     icon: Code,
-    color: "from-blue-500/10 to-cyan-500/10",
     fullWidth: false,
   },
   {
@@ -100,7 +98,6 @@ const skillCategories = [
       "API Security",
     ],
     icon: Server,
-    color: "from-green-500/10 to-emerald-500/10",
     fullWidth: false,
   },
   {
@@ -114,7 +111,6 @@ const skillCategories = [
       "Database Design",
     ],
     icon: Database,
-    color: "from-purple-500/10 to-violet-500/10",
     fullWidth: false,
   },
 
@@ -129,7 +125,6 @@ const skillCategories = [
       "Mentoring",
     ],
     icon: Users,
-    color: "from-pink-500/10 to-rose-500/10",
     fullWidth: true,
   },
 ];
