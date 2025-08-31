@@ -38,7 +38,7 @@ export default function About() {
                 .
               </p>
 
-              <p className="leading-relaxed text-muted-foreground mt-5">
+              <p className="leading-relaxed text-muted-foreground mt-5 hidden lg:block">
                 I love blending technology with intelligence. While I have
                 hands-on experience building robust RESTful applications using
                 Node.js, Express, and MongoDB , I&apos;m now diving deeper into
@@ -47,7 +47,7 @@ export default function About() {
                 Java to strengthen my problem-solving foundation.
               </p>
 
-              <p className="leading-relaxed text-muted-foreground mt-5">
+              <p className="leading-relaxed text-muted-foreground mt-5 hidden lg:block">
                 My goal is to become an expert backend engineer with deep
                 knowledge in DevOps, cloud platforms, and AI-driven workflows
                 delivering fast, scalable, and secure solutions. Whether

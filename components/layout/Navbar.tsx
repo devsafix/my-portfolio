@@ -78,7 +78,9 @@ export const Navbar = () => {
                 </ul>
                 <div className="flex flex-col mt-6 space-y-3 sm:flex-row sm:gap-3 sm:space-y-0">
                   <Button asChild size="sm">
-                    <Link href="#">Get Started</Link>
+                    <Link target="_blank" href={"https://wa.me/8801709190412"}>
+                      Message Now
+                    </Link>
                   </Button>
                 </div>
               </div>

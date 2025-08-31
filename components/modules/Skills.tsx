@@ -33,7 +33,7 @@ export default function Skills() {
 function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
   return (
     <div
-      className={`group p-8 bg-gradient-to-br rounded-2xl border border-border`}
+      className={`group p-5 md:p-8 bg-gradient-to-br rounded-2xl border border-border`}
     >
       {/* Category Header */}
       <div className="flex items-center justify-center mb-3">

@@ -76,7 +76,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
-          <div className="space-y-8 border border-border rounded-2xl p-10">
+          <div className="space-y-8 border border-border rounded-2xl p-5 md:p-10">
             {/* Office Address */}
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-12 h-12 border border-border hover:bg-accent rounded-full">
@@ -128,7 +128,7 @@ export default function Contact() {
             <form
               onSubmit={handleSubmit}
               ref={form}
-              className="space-y-6 border border-border rounded-2xl p-10"
+              className="space-y-6 border border-border rounded-2xl p-5 md:p-10"
             >
               {/* Full Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
