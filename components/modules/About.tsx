@@ -5,7 +5,7 @@ import SectionHeader from "../SectionHeader";
 export default function About() {
   return (
     <section id="about" className="max-w-7xl mx-auto px-4 pb-16">
-      <div className="bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500">
+      <div className="bg-card border border-border rounded-3xl p-5 md:p-10">
         <SectionHeader
           title="About My Journey"
           subtitle="Discover my path as a passionate full-stack developer, constantly evolving with modern technologies and exploring the intersection of development and AI automation."

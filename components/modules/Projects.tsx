@@ -8,6 +8,29 @@ import Image from "next/image";
 
 const allProjectsData = [
   {
+    title: "Ridaa",
+    description: "A Fullstack Ride Booking System.",
+    image: "https://i.ibb.co.com/b5dx9pBq/rida-bg.jpg",
+    liveLink: "https://ridaa.vercel.app/",
+    clientLink: "https://github.com/devsafix/ride-booking-system-client",
+    serverLink: "https://github.com/devsafix/ride-booking-system-backend",
+    tech: [
+      "TypeScript",
+      "React.js",
+      "Redux Toolkit",
+      "Shadcn",
+      "Express",
+      "Mongoose",
+      "JWT",
+      "Bcrypt",
+      "Zod",
+    ],
+    mernStack: true,
+    reactJs: true,
+    NextJs: false,
+    template: true,
+  },
+  {
     title: "BazaarNest",
     description: "An E-commerce project built with the MERN stack!",
     image: "https://i.ibb.co.com/dm26v0H/E-Commerce-Facebook-Ad.png",
@@ -113,30 +136,6 @@ const allProjectsData = [
     template: true,
   },
   {
-    title: "Smart Tech Spot",
-    description:
-      "A query management system with user verification and admin functionality.",
-    image: "https://i.ibb.co.com/GVRxqbR/Screenshot-2025-01-04-235258.jpg",
-    liveLink: "https://smart-tech-project.web.app/",
-    clientLink: "https://github.com/dev-kawser/query-website-client",
-    serverLink: "https://github.com/dev-kawser/query-website-server",
-    tech: [
-      "Tailwind css",
-      "React",
-      "React router",
-      "Firebase",
-      "Swiper js",
-      "Node js",
-      "Express",
-      "Mongodb",
-    ],
-
-    mernStack: true,
-    reactJs: true,
-    NextJs: false,
-    template: true,
-  },
-  {
     title: "Video Editor Portfolio",
     description: "Creative Video Editing, Seamlessly Delivered",
     image:
@@ -209,7 +208,7 @@ const projectsData = allProjectsData.map((proj, index) => ({
     ? "Next.js"
     : proj.reactJs
     ? "Frontend"
-    : "General",
+    : "",
   image: proj.image,
   liveLink: proj.liveLink || null,
   clientRepo: proj.clientLink || null,
@@ -217,7 +216,7 @@ const projectsData = allProjectsData.map((proj, index) => ({
   featured: true,
 }));
 
-const categories = ["All", "Frontend", "Full-Stack", "Next.js", "General"];
+const categories = ["All", "Full-Stack", "Frontend", "Next.js"];
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("All");
@@ -229,7 +228,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="max-w-7xl mx-auto px-4 py-16">
-      <div className="bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl hover:shadow-2xl transition-all">
+      <div className="bg-card border border-border rounded-3xl p-5 md:p-10">
         <SectionHeader
           title="Works & Projects"
           subtitle="Check out some of my development projects, meticulously crafted with love and dedication, each one reflecting the passion and soul I poured into every detail."

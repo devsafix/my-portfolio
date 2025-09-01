@@ -7,6 +7,29 @@ interface ProjectDetailsProps {
 
 const allProjectsData = [
   {
+    title: "Ridaa",
+    description: "A Fullstack Ride Booking System.",
+    image: "https://i.ibb.co.com/b5dx9pBq/rida-bg.jpg",
+    liveLink: "https://ridaa.vercel.app/",
+    clientLink: "https://github.com/devsafix/ride-booking-system-client",
+    serverLink: "https://github.com/devsafix/ride-booking-system-backend",
+    tech: [
+      "TypeScript",
+      "React.js",
+      "Redux Toolkit",
+      "Shadcn",
+      "Express",
+      "Mongoose",
+      "JWT",
+      "Bcrypt",
+      "Zod",
+    ],
+    mernStack: true,
+    reactJs: true,
+    NextJs: false,
+    template: true,
+  },
+  {
     title: "BazaarNest",
     description: "An E-commerce project built with the MERN stack!",
     image: "https://i.ibb.co.com/dm26v0H/E-Commerce-Facebook-Ad.png",
@@ -107,30 +130,6 @@ const allProjectsData = [
     tech: ["Tailwind css", "React", "React router", "Swiper js"],
 
     mernStack: false,
-    reactJs: true,
-    NextJs: false,
-    template: true,
-  },
-  {
-    title: "Smart Tech Spot",
-    description:
-      "A query management system with user verification and admin functionality.",
-    image: "https://i.ibb.co.com/GVRxqbR/Screenshot-2025-01-04-235258.jpg",
-    liveLink: "https://smart-tech-project.web.app/",
-    clientLink: "https://github.com/dev-kawser/query-website-client",
-    serverLink: "https://github.com/dev-kawser/query-website-server",
-    tech: [
-      "Tailwind css",
-      "React",
-      "React router",
-      "Firebase",
-      "Swiper js",
-      "Node js",
-      "Express",
-      "Mongodb",
-    ],
-
-    mernStack: true,
     reactJs: true,
     NextJs: false,
     template: true,

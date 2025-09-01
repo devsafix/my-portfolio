@@ -1,12 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { Code, Server, Database, Users } from "lucide-react";
+import { Code, Server, Database } from "lucide-react";
 import SectionHeader from "../SectionHeader";
+
+interface SkillCategory {
+  title: string;
+  list: string[];
+  icon: React.ElementType;
+  fullWidth?: boolean;
+}
 
 export default function Skills() {
   return (
     <section id="skills" className="max-w-7xl mx-auto px-4">
-      <div className="bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500">
+      <div className="bg-card border border-border rounded-3xl p-5 md:p-10">
         {/* Header Section */}
         <SectionHeader
           title="Skills & Expertise"
@@ -21,7 +28,6 @@ export default function Skills() {
               title={category.title}
               list={category.list}
               icon={category.icon}
-              isFullWidth={category.fullWidth}
             />
           ))}
         </div>
@@ -30,7 +36,13 @@ export default function Skills() {
   );
 }
 
-function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
+interface SkillCardProps {
+  title: string;
+  list: string[];
+  icon: React.ElementType;
+}
+
+function SkillCard({ title, list, icon: Icon }: SkillCardProps) {
   return (
     <div
       className={`group p-5 md:p-8 bg-gradient-to-br rounded-2xl border border-border`}
@@ -63,7 +75,7 @@ function SkillCard({ title, list, icon: Icon, isFullWidth = false }) {
   );
 }
 
-const skillCategories = [
+const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     list: [

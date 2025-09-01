@@ -62,7 +62,23 @@ const educationData = [
   },
 ];
 
-const TimelineCard = ({ item, icon: Icon }) => (
+interface TimelineItem {
+  id: number;
+  period: string;
+  title: string;
+  company?: string;
+  institution?: string;
+  description: string;
+  current?: boolean;
+  completed?: boolean;
+}
+
+interface TimelineCardProps {
+  item: TimelineItem;
+  icon: React.ElementType;
+}
+
+const TimelineCard: React.FC<TimelineCardProps> = ({ item, icon: Icon }) => (
   <div className="group relative">
     {/* Timeline line connector */}
     <div className="absolute left-6 top-16 w-px h-full bg-border group-last:hidden"></div>

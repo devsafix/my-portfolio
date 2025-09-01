@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="text-white pt-16 pb-10">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+    <footer className="max-w-7xl mx-auto px-4 pt-16 pb-10">
+      <div className="bg-card border border-border rounded-3xl p-5 md:p-10 flex flex-col md:flex-row items-center justify-between">
         {/* Left Section */}
         <div className="text-center md:text-left mb-4 md:mb-0 ">
           <h4 className="text-sm md:text-base">

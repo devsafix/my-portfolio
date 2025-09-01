@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Download,
-  Github,
-  Facebook,
-  Instagram,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { Download, Github, Facebook, Linkedin, Phone } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,8 +16,8 @@ const personalInfo = {
   photo: "https://i.ibb.co.com/7xsYZ7HQ/devsafix.png",
   social: {
     github: "https://github.com/devsafix",
+    linkedin: "https://www.linkedin.com/in/devsafix",
     facebook: "https://www.facebook.com/devsafix",
-    instagram: "https://www.instagram.com/devsafix",
   },
 };
 
@@ -35,7 +28,7 @@ export default function Banner() {
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {/* Left Profile (1/3) */}
-            <div className="bg-card border border-border rounded-3xl p-8 text-center shadow-xl flex flex-col justify-between">
+            <div className="bg-card border border-border rounded-3xl p-8 text-center flex flex-col justify-between">
               <div>
                 {/* Profile Image */}
                 <div className="relative mx-auto mb-6 flex items-center justify-center">
@@ -59,9 +52,10 @@ export default function Banner() {
                 {Object.entries(personalInfo.social).map(([key, url]) => {
                   const Icon = {
                     github: Github,
+                    linkedin: Linkedin,
                     facebook: Facebook,
-                    instagram: Instagram,
                   }[key];
+                  if (!Icon) return null;
                   return (
                     <Link
                       key={key}
@@ -86,7 +80,7 @@ export default function Banner() {
             </div>
 
             {/* Right Content (2/3) */}
-            <div className="lg:col-span-2 bg-card border border-border rounded-3xl p-5 md:p-10 shadow-xl flex flex-col justify-center">
+            <div className="lg:col-span-2 bg-card border border-border rounded-3xl p-5 md:p-10 flex flex-col justify-center">
               <p className="text-muted-foreground text-base mb-4">
                 {personalInfo.greeting}
               </p>
@@ -106,10 +100,17 @@ export default function Banner() {
                 </span>
               </div>
 
-              <Button className="cursor-pointer w-[150px] rounded-xl py-5 flex items-center gap-2">
-                <Download className="w-4 h-4" />
-                <span>Download CV</span>
-              </Button>
+              <Link
+                target="_blank"
+                href={
+                  "https://docs.google.com/document/d/1pHPCafL-0FDBjeluJvTy2kJFhm_TUxpjDdMnfNPoxuc/edit?usp=sharing"
+                }
+              >
+                <Button className="cursor-pointer w-[150px] rounded-xl py-5 flex items-center gap-2">
+                  <Download className="w-4 h-4" />
+                  <span>Download CV</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
